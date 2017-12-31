@@ -1,0 +1,26 @@
+---
+
+version: '3'
+
+services:
+
+  mariadb-server:
+    image: mariadb:10.3
+    environment:
+    - MYSQL_ROOT_PASSWORD=secret
+    - MYSQL_DATABASE=documize
+    - MYSQL_USER=documize
+    - MYSQL_PASSWORD=documize
+    command: --character-set-server=utf8mb4
+    volumes:
+    - data-mariadb:/var/lib/mysql
+
+  documize-server:
+    image: ownport/documize:latest
+    depends_on:
+    - mariadb-server
+    ports:
+    - "8080:8080"  
+
+volumes:
+  data-mariadb:

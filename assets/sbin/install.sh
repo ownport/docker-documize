@@ -7,7 +7,7 @@ echo '[INFO] Install build dependencies' && \
         wget 
 
 echo '[INFO] Install documize' && \
-    wget https://github.com/documize/community/releases/download/v1.55.0/documize-community-linux-amd64 -q -O /sbin/documize && \
+    wget https://github.com/documize/community/releases/download/v2.1.1/documize-community-linux-amd64 -q -O /sbin/documize && \
     chmod +x /sbin/documize
 
 echo '[INFO] Update scripts and configs' && \

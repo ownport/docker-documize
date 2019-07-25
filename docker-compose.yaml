@@ -21,6 +21,8 @@ services:
     - mariadb-server
     ports:
     - "8080:8080"  
+    environment:
+      DOCUMIZEDB: "documize:documize@tcp(mariadb-server:3306)/documize"
 
 volumes:
   data-mariadb:

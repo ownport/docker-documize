@@ -16,7 +16,7 @@ services:
     - data-mariadb:/var/lib/mysql
 
   documize-server:
-    image: ownport/documize:2.1.1
+    image: ownport/documize:3.1.1
     depends_on:
     - mariadb-server
     ports:

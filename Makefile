@@ -1,6 +1,6 @@
-DOCUMIZE_VERSION ?= 2.1.1
+DOCUMIZE_VERSION ?= 3.1.1
 
-build-docker-image:
+build:
 	docker build -t ownport/documize:${DOCUMIZE_VERSION} .
 
 run-documize-container:

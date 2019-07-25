@@ -2,12 +2,14 @@
 
 set -e -u
 
+DOCUMIZE_VERSION=${1:-}
+
 echo '[INFO] Install build dependencies' && \
     apk add --no-cache --virtual .build-deps \
         wget 
 
 echo '[INFO] Install documize' && \
-    wget https://github.com/documize/community/releases/download/v2.1.1/documize-community-linux-amd64 -q -O /sbin/documize && \
+    wget https://github.com/documize/community/releases/download/v${DOCUMIZE_VERSION}/documize-community-linux-amd64 -q -O /sbin/documize && \
     chmod +x /sbin/documize
 
 echo '[INFO] Update scripts and configs' && \
